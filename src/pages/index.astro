@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Portafolio de Patricio - Desarrollador y Programador Web"
+  description="Contrata a Patricio para crear una aplicación web móvil. Desarrollador web"
+>
+  <main class="px-6">
+    <SectionContainer class="py-24 pb-30">
+      <img
+        src="https://avatars.githubusercontent.com/u/120836182?v=4https://avatars.githubusercontent.com/u/120836182?v=4"
+        alt="avatar patricio"
+        class="rounded-full size-12 mb-4"
+      />
+      <h1
+        class="text-white font-bold md:text-4xl text-3xl lg:text-5xl pb-4 lg:pb-8 flex flex-row gap-x-4"
+      >
+        Que tal, soy Patricio
+        <div class="flex justify-center items-center">
+          <Badge>¡Listo para crear!</Badge>
+        </div>
+      </h1>
+      <h2 class="text-xl lg:text-3xl text-wrap w-full">
+        Soy un desarrollador web entusiasta y creativo, ¡y estoy aquí para
+        llevar tus ideas al siguiente nivel!
+      </h2>
+
+      <nav class="flex flex-wrap gap-4 mt-4">
+        <SocialPill
+          href="https://www.linkedin.com/in/patricio-alexander-briceño"
+        >
+          <LinkedinIcon class="size-4 md:size-5" /> Linkedin
+        </SocialPill>
+        <SocialPill href="https://github.com/patricio-alexander">
+          <GitHubIcon class="size-4 md:size-5" /> GitHub
+        </SocialPill>
+        <SocialPill href="mailto:pabrisdev@gmail.com">
+          <MailIcon class="size-4 md:size-6" /> pabrisdev@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer>
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>
