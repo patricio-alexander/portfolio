@@ -1,9 +1,51 @@
+---
+const navItems = [
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+
+  {
+    title: "Proyectos",
+    label: "contacto",
+    url: "/#proyectos",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:pabrisdev@gmail.com",
+  },
+];
+---
+
 <header
-  class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
+  class="fixed top-2 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
-  <nav class="flex flex-row gap-x-10 opacity-90">
-    <a href="/">Acerca de</a>
-    <a href="/projectos">projectos</a>
-    <a href="/sobre-mi">sobre mí</a>
+  <nav class="flex flex-row gap-x-10 opacity-90 rounded-md">
+    {
+      navItems.map((item) => (
+        <a
+          class="relative block px-2 py-2  transition"
+          href={item.url}
+          aria-label={item.label}
+        >
+          {item.title}
+        </a>
+      ))
+    }
   </nav>
 </header>
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-white/50 ring-white/10;
+    }
+  }
+</style>
