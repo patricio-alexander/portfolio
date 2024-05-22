@@ -26,7 +26,7 @@ const navItems = [
     {
       navItems.map((item) => (
         <a
-          class="relative block px-2 py-2  transition"
+          class="relative block px-2 py-2 text-violet-400 transition"
           href={item.url}
           aria-label={item.label}
         >
@@ -45,7 +45,7 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur bg-white/50 ring-white/10;
+      @apply shadow-lg ring-1 backdrop-blur bg-gray-800/60 ring-white/5;
     }
   }
 </style>
