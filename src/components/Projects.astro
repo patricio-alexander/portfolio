@@ -19,6 +19,11 @@ const TAGS = {
     class: "text-gray-300 font-medium",
     icon: React,
   },
+  REACTNATIVE: {
+    name: "React Native",
+    class: "text-gray-300 font-medium",
+    icon: React,
+  },
   EXPRESSJS: {
     name: "Express JS",
     class: "text-gray-300 font-medium",
@@ -38,6 +43,13 @@ const TAGS = {
 
 const PROJECTS = [
   {
+    title: "Minimalist Player",
+    description: "Reproductor de música, desarrollado en React Native",
+    image: "/projects/musicplayer.webp",
+    tags: [TAGS.REACTNATIVE],
+    github: "https://github.com/patricio-alexander/musicplayer",
+  },
+  {
     title: "Iron Subscription",
     description:
       "App de Control de Pagos Mensuales para Gimnasios en React Native, Express, MySQL y React Native Paper",
@@ -48,19 +60,19 @@ const PROJECTS = [
   {
     title: "Lista de tareas",
     description:
-      "Lista de tareas desarrollado en REACT, EXPRESS, MYSQL y BULMA CSS.",
+      "Lista de tareas desarrollado en React, Express JS, MySql y Bulma CSS.",
     image: "/projects/tasklist.webp",
     tags: [TAGS.REACT, TAGS.EXPRESSJS, TAGS.BULMA],
     github: "https://github.com/patricio-alexander/taskAppReact",
   },
   {
     title: "ALUMNI",
-    description: "Alumni del ISTMS, desarrollado en REACT, EXPRESS, Chakra UI",
+    description: "Alumni del ISTMS, desarrollado en React, Express JS, Chakra UI",
     image: "/projects/alumni.webp",
     tags: [TAGS.REACT, TAGS.EXPRESSJS, TAGS.CHAKRAUI, TAGS.MYSQL],
     github: "https://github.com/EdgarPC8/egresados_graduados",
     deploy: "http://www.aplicaciones.marianosamaniego.edu.ec/alumni",
-  },
+    },
 ];
 ---
 
