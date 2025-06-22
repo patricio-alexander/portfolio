@@ -7,8 +7,15 @@ import Bulma from "./icons/Bulma.astro";
 import ChakraUi from "./icons/ChakraUi.astro";
 import MySql from "./icons/MySql.astro";
 import Eye from "./icons/Eye.astro";
+import SQLite from "./icons/SQLite.astro"
+import Expo from "./icons/Expo.astro"
 
 const TAGS = {
+  SQLITE: {
+    name: "SQLite",
+    class: "text-gray-300 font-medium",
+    icon: SQLite
+  },
   BULMA: {
     name: "BULMA",
     class: "text-gray-300 font-medium",
@@ -39,9 +46,21 @@ const TAGS = {
     class: "text-gray-300 font-medium",
     icon: MySql,
   },
+  EXPO: {
+    name: "Expo",
+    class: "text-gray-300 font-medium",
+    icon: Expo
+  }
 };
 
 const PROJECTS = [
+  {
+    title: "Strength Up",
+    description: "App para registrar rutinas. Sobrecarga progresiva",
+    image: "/projects/strength-up.webp",
+    tags: [TAGS.REACTNATIVE, TAGS.SQLITE, TAGS.EXPO],
+    deploy: "https://play.google.com/store/apps/details?id=com.pabris.StrengthUp"
+  },
   {
     title: "Minimalist Player",
     description: "Reproductor de música, desarrollado en React Native",
@@ -58,6 +77,14 @@ const PROJECTS = [
     github: "https://github.com/patricio-alexander/client-native-gym",
   },
   {
+    title: "ALUMNI",
+    description: "Alumni del ISTMS, desarrollado en React, Express JS, Chakra UI",
+    image: "/projects/alumni.webp",
+    tags: [TAGS.REACT, TAGS.EXPRESSJS, TAGS.CHAKRAUI, TAGS.MYSQL],
+    github: "https://github.com/EdgarPC8/egresados_graduados",
+    deploy: "http://www.aplicaciones.marianosamaniego.edu.ec/alumni",
+  },
+  {
     title: "Lista de tareas",
     description:
       "Lista de tareas desarrollado en React, Express JS, MySql y Bulma CSS.",
@@ -65,14 +92,7 @@ const PROJECTS = [
     tags: [TAGS.REACT, TAGS.EXPRESSJS, TAGS.BULMA],
     github: "https://github.com/patricio-alexander/taskAppReact",
   },
-  {
-    title: "ALUMNI",
-    description: "Alumni del ISTMS, desarrollado en React, Express JS, Chakra UI",
-    image: "/projects/alumni.webp",
-    tags: [TAGS.REACT, TAGS.EXPRESSJS, TAGS.CHAKRAUI, TAGS.MYSQL],
-    github: "https://github.com/EdgarPC8/egresados_graduados",
-    deploy: "http://www.aplicaciones.marianosamaniego.edu.ec/alumni",
-    },
+  
 ];
 ---
 
@@ -99,7 +119,7 @@ const PROJECTS = [
                   <span
                     class={`flex items-center gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
                   >
-                    <tag.icon class="size-4" />
+                    <tag.icon class="size-6" />
                     {tag.name}
                   </span>
                 </li>
