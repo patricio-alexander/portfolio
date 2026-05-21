@@ -8,6 +8,7 @@ import MailIcon from "../components/icons/Mail.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
+import UserIcon from "../components/icons/User.astro";
 ---
 
 <Layout
@@ -15,25 +16,29 @@ import Projects from "../components/Projects.astro";
   description="Contrata a Patricio para crear una aplicación web móvil. Desarrollador web"
 >
   <main class="px-6">
-    <SectionContainer class="py-24 pb-30" id="sobre-mi">
+    <SectionContainer class="pt-24 mb-8" id="sobre-mi">
       <img
         src="https://avatars.githubusercontent.com/u/120836182?v=4https://avatars.githubusercontent.com/u/120836182?v=4"
         alt="avatar patricio"
-        class="rounded-full size-12 mb-4"
+        class="rounded-full size-24 mb-4"
       />
       <h1
         class="text-white font-bold md:text-4xl text-3xl lg:text-5xl pb-4 lg:pb-8 flex flex-row gap-x-4"
       >
-        Que tal, soy Patricio
+        Que tal, soy Pato
         <div class="flex justify-center items-center">
           <Badge>¡Listo para crear!</Badge>
         </div>
       </h1>
-      <h2 class="text-xl lg:text-3xl text-wrap w-full">
-         Desarrollador fullstack especializado en React Native, ¡y estoy aquí para que tus ideas cobren vida!
+      <span class="text-sm text-lime-300 bg-lime-50/10 border border-lime-300 px-2 py-1 mb-4 rounded-full flex items-center gap-1 w-fit">
+          <span class="w-2 h-2 bg-lime-300 rounded-full animate-pulse"></span>
+          +2 años de experiencia
+      </span>
+      <h2 class="text-xl lg:text-1xl text-wrap w-full">
+         Desarrollador Full-Stack de apps móviles con React Native ¡Estoy aquí para que tus ideas cobren vida!
       </h2>
 
-      <nav class="flex flex-wrap gap-4 mt-4">
+      <nav class="flex flex-wrap gap-4 mt-4 mb-10">
         <SocialPill
           href="https://www.linkedin.com/in/patricio-alexander-briceño"
         >
@@ -46,6 +51,18 @@ import Projects from "../components/Projects.astro";
           <MailIcon class="size-4 md:size-6" /> pabrisdev@gmail.com
         </SocialPill>
       </nav>
+
+
+      <h1 class="text-base lg:text-3xl md:text-2xl font-bold mb-8 flex gap-x-3 items-center"> <UserIcon class="size-7"/> Me presento</h1>
+      <p class="text-base lg:text-xl mb-2">
+        Mi nombre es Patricio, pero mis amigos me conocen como Pato.
+        Empecé en el mundo del desarrollo con un “Hola Mundo”,
+        que se convirtió en el detonante para <span class="text-lime-300">crear soluciones tecnológicas reales</span>.
+      </p>
+      <p class="text-base lg:text-xl">
+        Y estoy listo para sumergirme en proyectos apasionantes mediante mis habilidades técnicas, creatividad, 
+y espíritu colaborativo <span class="text-lime-300">contribuir al éxito de tu equipo</span>.
+      </p>
     </SectionContainer>
 
     <SectionContainer id="proyectos">

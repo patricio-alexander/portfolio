@@ -22,7 +22,7 @@ const navItems = [
 <header
   class="fixed top-2 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
-  <nav class="flex flex-row gap-x-10 opacity-90 rounded-md">
+  <nav class="flex flex-row gap-x-10 rounded-full px-4">
     {
       navItems.map((item) => (
         <a
@@ -45,7 +45,7 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur bg-gray-800/60 ring-white/5;
+      @apply shadow-lg  backdrop-blur-md bg-zinc-800/30;
     }
   }
 </style>
